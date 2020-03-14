@@ -1,19 +1,24 @@
-// LOAD INTO global celldata make flag .ready = true when done. 
+/*
+we are loading data from LV CSB site. 
 
-/* 
-this is csv file example downloaded from stat:
- 
+(1) file inside looks lis this (comma delimited)
 # Pedejas izmainas/Last updated 13.01.2020.
 ID,Total
 100mX3135Y2431,5
 100mX3135Y2436,5
 ... ('000 lines) 
-*/
-	
-	//var CSVFILENAME = 'https://www.csb.gov.lv/sites/default/files/tile/2019-06/Grid_LV_100_population_2019_PUBLIC.csv';
-	//var CSVFILENAME = 'https://www.csb.gov.lv/sites/default/files/tile/2019-06/Grid_LV_1k_population_2019_PUBLIC.csv';
-	
+
+(2) files are taken here (this is public dataset)
+	'https://www.csb.gov.lv/sites/default/files/tile/2019-06/Grid_LV_100_population_2019_PUBLIC.csv';
+	'https://www.csb.gov.lv/sites/default/files/tile/2019-06/Grid_LV_1k_population_2019_PUBLIC.csv';
+
+(3) local copies are used - csb site does not allow cross domain loading
+
+	*/
 	var CSVFILENAME = '/Grid_LV_1k_population_2019_PUBLIC.csv';
+	if (window.location.href.indexOf('100m') > -1)
+		var CSVFILENAME = '/Grid_LV_100_population_2019_PUBLIC.csv';
+
     var celldata = []; // list of cell .x .y .v   (coordinates X Y and Value).   
 	
     // DATA LOADER
