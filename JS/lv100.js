@@ -333,7 +333,7 @@
         }        var texture1 = new THREE.Texture(canvas1); 
         texture1.anisotropy = 8;
         texture1.needsUpdate = true;
-        var material1 = new THREE.MeshBasicMaterial( {map: texture1, side:THREE.DoubleSide, transparent: false, wireframe: true } );
+        var material1 = new THREE.MeshBasicMaterial( {map: texture1, side:THREE.DoubleSide, transparent: false, wireframe: false } );
 
         material1.getUVS12 = function (uvs, start, idx) {
             // adds 12 entries for the requested tile with idx. (triangles for plane skin)
