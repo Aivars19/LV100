@@ -15,9 +15,9 @@ ID,Total
 (3) local copies are used - csb site does not allow cross domain loading
 
 	*/
-	var CSVFILENAME = './Grid_LV_1k_population_2019_PUBLIC.csv';
+	var CSVFILENAME = 'Grid_LV_1k_population_2019_PUBLIC.csv';
 	if (window.location.href.indexOf('100m') > -1)
-		var CSVFILENAME = './Grid_LV_100_population_2019_PUBLIC.csv';
+		var CSVFILENAME = 'Grid_LV_100_population_2019_PUBLIC.csv';
 
     var celldata = []; // list of cell .x .y .v   (coordinates X Y and Value).   
 	
