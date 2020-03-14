@@ -203,10 +203,6 @@ THREE.OrbitAndPanControls = function ( object, domElement) {
         controlposition = getPoint( mouseXY, camera );
         lookatposition = THREE.Utils.cameraLookAt(camera, scope.targetDistance);
 
-        printPosition('camera', camera.position);
-        printPosition('control', controlposition);
-        printPosition('lookat', lookatposition);
-
 		var delta = event.deltaY;
 
         var direction = (delta > 0) ? -1.0 : 1.0;
