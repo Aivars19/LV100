@@ -1,4 +1,4 @@
-
+﻿
 
     function distance(p1,p2){
         return Math.sqrt( (p1.x - p2.x) * (p1.x - p2.x) +
@@ -333,7 +333,7 @@
         }        var texture1 = new THREE.Texture(canvas1); 
         texture1.anisotropy = 8;
         texture1.needsUpdate = true;
-        var material1 = new THREE.MeshBasicMaterial( {map: texture1, side:THREE.DoubleSide, transparent: true } );
+        var material1 = new THREE.MeshBasicMaterial( {map: texture1, side:THREE.DoubleSide, transparent: false, wireframe: true } );
 
         material1.getUVS12 = function (uvs, start, idx) {
             // adds 12 entries for the requested tile with idx. (triangles for plane skin)
