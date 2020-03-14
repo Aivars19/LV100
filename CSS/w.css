@@ -1,0 +1,20 @@
+html, body {
+height: 100%;
+}
+body {
+background-color: #000000; 
+margin: 0;
+font-family: Helvetica, sans-serif;;
+overflow: hidden;
+}
+#infobox {
+position: absolute; 
+z-index: 1; 
+bottom: 0px; 
+left: 100px; 
+text-align:center; 
+width:300px; 
+background-color: gray;
+background: transparent;
+opacity: 0.5;
+}
